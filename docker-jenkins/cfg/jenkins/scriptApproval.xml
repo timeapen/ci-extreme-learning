@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.24">
+  <approvedScriptHashes/>
+  <approvedSignatures>
+    <string>method groovy.json.JsonBuilder getContent</string>
+    <string>method groovy.json.JsonBuilder toPrettyString</string>
+    <string>method groovy.lang.GroovyObject invokeMethod java.lang.String java.lang.Object</string>
+    <string>method hudson.model.Run getLog int</string>
+    <string>method hudson.plugins.git.GitChangeSet getAuthorName</string>
+    <string>method java.lang.Throwable getMessage</string>
+    <string>method java.lang.Throwable getStackTrace</string>
+    <string>method java.lang.Throwable printStackTrace</string>
+    <string>method java.text.Format format java.lang.Object</string>
+    <string>method org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper getRawBuild</string>
+    <string>java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String</string>
+    <string>new com.urbancode.ds.jenkins.plugins.urbandeploypublisher.UrbanDeployPublisher java.lang.String java.lang.Boolean java.lang.String hudson.util.Secret java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Boolean java.lang.Boolean java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String</string>
+    <string>new com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock java.lang.String java.lang.String</string>
+    <string>new com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.String java.lang.Boolean</string>
+    <string>new com.urbancode.jenkins.plugins.ucdeploy.UCDeployPublisher java.lang.String com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock com.urbancode.jenkins.plugins.ucdeploy.DeployHelper$DeployBlock</string>
+    <string>new com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock java.lang.String com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$DeliveryBlock</string>
+    <string>new groovy.json.JsonBuilder java.lang.Object</string>
+    <string>new hudson.triggers.SCMTrigger java.lang.String</string>
+    <string>new hudson.util.Secret java.lang.String</string>
+    <string>new java.io.File java.lang.String</string>
+    <string>new java.lang.Exception java.lang.String</string>
+    <string>new java.lang.IllegalStateException java.lang.String</string>
+    <string>new java.lang.RuntimeException java.lang.String</string>
+    <string>new java.text.SimpleDateFormat java.lang.String</string>
+    <string>new java.util.Date</string>
+    <string>new java.util.HashMap</string>
+    <string>staticField hudson.model.Result FAILURE</string>
+    <string>staticField hudson.model.Result SUCCESS</string>
+    <string>staticField hudson.model.Result UNSTABLE</string>
+    <string>staticMethod hudson.model.Result fromString java.lang.String</string>
+    <string>staticMethod java.lang.Enum valueOf java.lang.Class java.lang.String</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DateGroovyMethods plus java.util.Date int</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods plus java.util.List java.lang.Iterable</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods plus java.util.List java.lang.Object</string>
+    <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods plus java.util.List java.util.Collection</string>
+  </approvedSignatures>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>

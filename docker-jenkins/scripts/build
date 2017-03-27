@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# This script builds docker image from docker-compose.yml file
+#
+# Example usage:
+#  ./build
+
+# Checking for the required environment variables needed for the image to build properly
+[ -z "$http_proxy" ] && { echo "ERROR! Environment variable 'http_proxy' is not set!"; exit 1; }
+[ -z "$SERVICE_USER_ID" ] && { echo "ERROR! Environment variable 'SERVICE_USER_ID' is not set!"; exit 1; }
+[ -z "$SERVICE_PASSWORD" ] && { echo "ERROR! Environment variable 'SERVICE_PASSWORD' is not set!"; exit 1; }
+
+# Exit if number of parameters is greater than 1
+if [ $# -gt 0 ]; then
+    echo "Script requires no parameters."
+    exit 1
+fi
+
+# Checking if script runs as a user in group 'docker' - otherwise, will abort
+docker_group=`groups | grep -o dockers`
+if [ -n "${docker_group}" ]; then
+    echo "ERROR: this script needs to run as a member of the group 'Docker'!"
+    exit 1
+fi
+
+# in case the script is not called from its location
+cd "$scriptPath"
+
+# pull the group gid from the host
+export DOCKER_GROUP_GID=`getent group docker|cut -d: -f3`
+
+set -o verbose
+docker-compose -f `dirname $0`/../docker-compose.yml build

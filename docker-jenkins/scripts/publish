@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+function help {
+    echo "Usage: $0 [nexus_user] [nexus_auth_token]"
+    exit 1
+}
+
+# Exit if number of parameters is not exactly 4
+if [[ $# -ne 2 ]]; then
+    help
+fi
+
+nexus_user=$1
+nexus_auth_token=$2
+
+docker login -u ${nexus_user} -p ${nexus_auth_token}
+docker-compose push
+docker logout
